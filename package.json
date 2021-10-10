@@ -1,0 +1,36 @@
+{
+	"name": "track-sequoia",
+	"version": "1.0.0",
+	"keywords": [
+		"sequoia",
+		"track",
+		"terminal"
+	],
+	"homepage": "https://github.com/fagiani/track-sequoia",
+	"repository": "git@github.com:fagiani/track-sequoia.git",
+	"license": "MIT",
+	"author": {
+		"name": "Paulo Fagiani",
+		"email": "pfagiani@gmail.com"
+	},
+	"type": "module",
+	"main": "index.js",
+	"bin": "src/bin.js",
+	"scripts": {
+		"start": "node src/bin.js"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"node-fetch": "^3.0.0",
+		"yarn": "^1.22.15"
+	},
+	"devDependencies": {
+		"eslint": "^7.9.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-prettier": "^4.0.0",
+		"prettier": "2.4.1"
+	},
+	"preferGlobal": true
+}
