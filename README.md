@@ -17,6 +17,18 @@
 npx track-sequoia [code]
 ```
 
+## Development
+To setup your development environment you'll need `node` and `yarn` installed on your machine.
+
+To install the dependencies, run
+```bash
+yarn install
+```
+To run your code use
+```bash
+yarn start [code]
+```
+
 ## 📣 Contributing
 
 If you want to contribute please fork the repository and get your hands dirty, and make the changes as you'd like and submit the Pull Request. Any questions, open a issue.
