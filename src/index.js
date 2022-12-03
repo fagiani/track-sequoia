@@ -29,18 +29,17 @@ function getIcon(status) {
 }
 
 async function getHash() {
-	const url = 'https://www.sequoialog.com.br/en/rastreio/';
-	const options = { redirect: 'manual' }
+	const url = 'https://sequoialog.com.br/rastreio/';
 
-	const response = await fetch(url, options);
+	const response = await fetch(url);
 
-	if ( response.status != '301' ) {
+	if ( response.status != '200' ) {
 		log("❌ Retorno inesperado:", response.status);
 		return null;
 	}
 
-	const hash = await response.headers.get('location').split('/').pop();
-
+	const body = await response.text()
+	const hash = body.split('/external/redirect/').pop().split("'")[0];
 	return hash;
 }
 
