@@ -34,7 +34,7 @@ async function getHash() {
 
 	const response = await fetch(url, options);
 
-	if ( response.status != '200' ) {
+	if ( response.ok ) {
 		log("❌ Retorno inesperado:", response.status);
 		return null;
 	}
