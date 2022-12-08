@@ -30,10 +30,11 @@ function getIcon(status) {
 
 async function getHash() {
 	const url = 'https://sequoialog.com.br/rastreio/';
+	const options = { method: 'GET' }
 
-	const response = await fetch(url);
+	const response = await fetch(url, options);
 
-	if ( response.status != '200' ) {
+	if ( response.ok ) {
 		log("❌ Retorno inesperado:", response.status);
 		return null;
 	}
